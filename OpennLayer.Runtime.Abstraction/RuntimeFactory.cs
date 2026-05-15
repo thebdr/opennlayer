@@ -1,0 +1,1 @@
+namespace OpennLayer.Runtime.Abstraction{public static class RuntimeFactory{public static ITiaRuntime Create(string version){return version switch{"19"=>new OpennLayer.Runtime.V19.TiaRuntimeV19(),"20"=>new OpennLayer.Runtime.V20.TiaRuntimeV20(),"21"=>new OpennLayer.Runtime.V21.TiaRuntimeV21(),_=>throw new System.Exception("Unsupported")};}}}

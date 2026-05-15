@@ -1,0 +1,1 @@
+using OpennLayer.Runtime.Abstraction;namespace OpennLayer.Application.Services{public class TiaPortalService{public System.Threading.Tasks.Task AttachAsync(string version){var rt=RuntimeFactory.Create(version);return rt.Session.AttachAsync();}}}

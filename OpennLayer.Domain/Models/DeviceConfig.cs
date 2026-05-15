@@ -1,0 +1,1 @@
+namespace OpennLayer.Domain.Models{public class DeviceConfig{public string Name{get;set;}public string Identifier{get;set;}}}

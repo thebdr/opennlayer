@@ -1,0 +1,1 @@
+namespace OpennLayer.Runtime.V21{public class TiaRuntimeV21:OpennLayer.Runtime.Abstraction.ITiaRuntime{public OpennLayer.Runtime.Abstraction.ITiaSession Session{get;}=new TiaSessionV21();}}

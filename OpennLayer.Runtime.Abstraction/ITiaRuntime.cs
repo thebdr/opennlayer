@@ -1,0 +1,1 @@
+namespace OpennLayer.Runtime.Abstraction{public interface ITiaRuntime{ITiaSession Session{get;}}public interface ITiaSession{System.Threading.Tasks.Task AttachAsync();void Detach();object Project{get;}}}

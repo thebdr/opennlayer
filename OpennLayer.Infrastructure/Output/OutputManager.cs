@@ -1,0 +1,1 @@
+using System;using System.IO;namespace OpennLayer.Infrastructure{public static class OutputManager{static string Base=Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),"OpennLayer");public static string Projects=>Create("Projects");static string Create(string n){var p=Path.Combine(Base,n);Directory.CreateDirectory(p);return p;}}}
