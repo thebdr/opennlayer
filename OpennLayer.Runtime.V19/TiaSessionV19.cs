@@ -1,1 +1,36 @@
-using Siemens.Engineering;using System.IO;using OpennLayer.Infrastructure;namespace OpennLayer.Runtime.V19{public class TiaSessionV19:OpennLayer.Runtime.Abstraction.ITiaSession{private TiaPortal portal;private Project project;public object Project=>project;public async System.Threading.Tasks.Task AttachAsync(){await System.Threading.Tasks.Task.Run(()=>{portal=new TiaPortal(TiaPortalMode.WithUserInterface);var dir=new DirectoryInfo(OutputManager.Projects);project=portal.Projects.Create(dir,$"Project_{System.DateTime.Now:yyyyMMdd_HHmmss}");});}public void Detach(){portal?.Dispose();}}}
+using Siemens.Engineering;
+using System;
+using System.IO;
+using System.Threading.Tasks;
+using OpennLayer.Infrastructure.Output;
+using OpennLayer.Runtime.Abstraction;
+
+namespace OpennLayer.Runtime.V19
+{
+    public class TiaSessionV19 : ITiaSession
+    {
+        private TiaPortal _portal;
+        private Project _project;
+
+        public object Project => _project;
+
+        public async Task AttachAsync()
+        {
+            await Task.Run(() =>
+            {
+                _portal = new TiaPortal(TiaPortalMode.WithUserInterface);
+
+                var dir = new DirectoryInfo(OutputManager.Projects);
+
+                string name = $"Project_{DateTime.Now:yyyyMMdd_HHmmss}";
+
+                _project = _portal.Projects.Create(dir, name);
+            });
+        }
+
+        public void Detach()
+        {
+            _portal?.Dispose();
+        }
+    }
+}

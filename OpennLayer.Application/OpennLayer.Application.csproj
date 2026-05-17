@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\OpennLayer.Runtime.Abstraction\OpennLayer.Runtime.Abstraction.csproj" />
+    <ProjectReference Include="..\OpennLayer.Runtime.V18\OpennLayer.Runtime.V18.csproj" />
+    <ProjectReference Include="..\OpennLayer.Runtime.V19\OpennLayer.Runtime.V19.csproj" />
+  </ItemGroup>
+
 </Project>

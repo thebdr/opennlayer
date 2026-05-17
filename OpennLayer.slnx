@@ -3,8 +3,7 @@
   <Project Path="OpennLayer.Domain/OpennLayer.Domain.csproj" />
   <Project Path="OpennLayer.Infrastructure/OpennLayer.Infrastructure.csproj" />
   <Project Path="OpennLayer.Runtime.Abstraction/OpennLayer.Runtime.Abstraction.csproj" />
+  <Project Path="OpennLayer.Runtime.V18/OpennLayer.Runtime.V18.csproj" Id="2f472bd4-fb54-408c-8049-7eb042f1c96d" />
   <Project Path="OpennLayer.Runtime.V19/OpennLayer.Runtime.V19.csproj" />
-  <Project Path="OpennLayer.Runtime.V20/OpennLayer.Runtime.V20.csproj" />
-  <Project Path="OpennLayer.Runtime.V21/OpennLayer.Runtime.V21.csproj" />
   <Project Path="OpennLayer.UI/OpennLayer.UI.csproj" />
 </Solution>

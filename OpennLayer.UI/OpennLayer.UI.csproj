@@ -8,4 +8,9 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\OpennLayer.Application\OpennLayer.Application.csproj" />
+    <ProjectReference Include="..\OpennLayer.Infrastructure\OpennLayer.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

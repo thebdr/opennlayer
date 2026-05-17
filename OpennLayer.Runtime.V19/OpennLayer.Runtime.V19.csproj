@@ -7,8 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\OpennLayer.Infrastructure\OpennLayer.Infrastructure.csproj" />
+    <ProjectReference Include="..\OpennLayer.Runtime.Abstraction\OpennLayer.Runtime.Abstraction.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="Siemens.Engineering">
-      <HintPath>.SiemensDoc\Siemens.Engineering.dll</HintPath>
+      <HintPath>C:\Program Files\Siemens\Automation\Portal V19\PublicAPI\V19\Siemens.Engineering.dll</HintPath>
     </Reference>
   </ItemGroup>
 
