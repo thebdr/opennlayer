@@ -9,7 +9,7 @@ namespace OpennLayer.Infrastructure.Versioning
         {
             var versions = new List<string>();
 
-            string basePath = @"C:\Program Files\Siemens\Automation\Portal";
+            string basePath = @"C:\Program Files\Siemens\Automation";
 
             if (!Directory.Exists(basePath))
                 return versions;
@@ -18,10 +18,10 @@ namespace OpennLayer.Infrastructure.Versioning
             {
                 var name = Path.GetFileName(dir);
 
-                if (name == "V18")
+                if (name == "Portal V18")
                     versions.Add("18");
 
-                if (name == "V19")
+                if (name == "Portal V19")
                     versions.Add("19");
             }
 
