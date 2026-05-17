@@ -1,12 +1,33 @@
 ﻿<Window x:Class="OpennLayer.UI.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:OpennLayer.UI"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="OpennLayer Studio" Height="250" Width="400">
+
+    <Grid Margin="10">
+
+        <StackPanel>
+
+            <!-- Load Versions Button -->
+            <Button Content="Load TIA Versions"
+                    Command="{Binding LoadVersionsCommand}"
+                    Margin="0,0,0,10"/>
+
+            <!-- Versions Dropdown -->
+            <ComboBox ItemsSource="{Binding Versions}"
+                      SelectedItem="{Binding SelectedVersion}"
+                      Margin="0,0,0,10"/>
+
+            <!-- Attach Button -->
+            <Button Content="Attach to TIA"
+                    Command="{Binding AttachCommand}"
+                    Margin="0,0,0,10"/>
+
+            <!-- Status -->
+            <TextBlock Text="{Binding Status}"
+                       FontWeight="Bold"
+                       Foreground="Blue"/>
+
+        </StackPanel>
 
     </Grid>
 </Window>
